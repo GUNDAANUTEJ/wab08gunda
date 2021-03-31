@@ -2,29 +2,29 @@ extends layout
 
 block content
   h1= title
- 
- div(class="container-fluid")
+  
+  div(class="container-fluid")
         div(class="row")
             -
-               let table = [
+                let table = [
                     {
-                        "Brand": "techwood",
-                        "quality": "medium",
-                        "cost": "100"                        
-                    },
-                    {
-                        "Brand": "tablewood",
+                        "Brand": "brand1",
                         "quality": "high",
-                        "cost": "150"
+                        "cost": "150"                        
                     },
                     {
-                        "Brand": "teakwood",
+                        "Brand": "brand2",
+                        "quality": "medium",
+                        "cost": "100"
+                    },
+                    {
+                        "Brand": "brand3",
                         "quality": "low",
-                        "cost": "80"
+                        "cost": "100"
                     },                   
-                ] 
-             each table1 in table 
-                div(class="col-sm-2") #{table1.brand}
-                div(class="col-sm-2") #{table1.quality}
-                div(class="col-sm-2") #{table1.cost}
- 
+                ]
+            each tables in table 
+                div(class="col-sm-2") #{tables.Brand}
+                div(class="col-sm-2") #{tables.quality}
+                div(class="col-sm-2") #{tables.cost}
+  
