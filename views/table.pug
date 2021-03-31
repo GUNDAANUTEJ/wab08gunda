@@ -23,8 +23,8 @@ block content
                         "cost": "100"
                     },                   
                 ]
-            each tables in table 
-                div(class="col-sm-2") #{tables.Brand}
-                div(class="col-sm-2") #{tables.quality}
-                div(class="col-sm-2") #{tables.cost}
+            each t in table 
+                div(class="col-sm-2") #{t.Brand}
+                div(class="col-sm-2") #{t.quality}
+                div(class="col-sm-2") #{t.cost}
   
