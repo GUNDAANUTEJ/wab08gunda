@@ -1,0 +1,30 @@
+extends layout
+
+block content
+  h1= title
+ 
+ div(class="container-fluid")
+        div(class="row")
+            -
+                let table = [
+                    {
+                        "Brand": "techwood",
+                        "quality": "medium",
+                        "cost": "100"                        
+                    },
+                    {
+                        "Brand": "tablewood",
+                        "quality": "high",
+                        "cost": "150"
+                    },
+                    {
+                        "Brand": "teakwood",
+                        "quality": "low",
+                        "cost": "80"
+                    },                   
+                ] 
+             each table1 in table 
+                div(class="col-sm-2") #{table1.brand}
+                div(class="col-sm-2") #{table1.quality}
+                div(class="col-sm-2") #{table1.cost}
+ 
